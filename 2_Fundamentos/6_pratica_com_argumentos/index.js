@@ -1,4 +1,4 @@
-// mode index.js --a=5 --b=8
+// node index.js --a=5 --b=8
 
 //módulo externo
 const minimist = require('minimist')
