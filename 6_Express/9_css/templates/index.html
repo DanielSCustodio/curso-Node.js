@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Google Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- #region -->
+
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  <title>SonicSource - Descubra a fonte do som perfeito!</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-container">
+        <div class="store-info-container">
+          <span><i class="fas fa-phone"></i>(00)1234-5678</span>
+          <span><i class="fa-solid fa-envelope"></i>contato@sonicsource.com.br</span>
+          <span><i class="fas fa-map-marker-alt"></i>Rua da música, 1234</span>
+        </div>
+        <div class="header-user-top-menu">
+          <span><i class="fas fa-dollar"></i><a href="/">BRL</a></span>
+          <span><i class="fas fa-user"></i><a href="/">Minha Conta</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="main-header-container">
+        <a href="/" id="brand">Sonic<span>Source</span> <i class="fas fa-headphones-alt"></i></a>
+        <form action="" id="search-form">
+          <input type="text" id="search" placeholder="Busque aqui" />
+          <input type="submit" class="btn" value="Pesquisar" />
+        </form>
+        <div class="header-actions-menu">
+          <div class="wishlist-container">
+            <span class="qty">3</span>
+            <i class="fa-solid fa-heart"></i>
+            <a href="/">Favoritos</a>
+          </div>
+          <div class="header-cart-container">
+            <span class="qty">7</span>
+            <i class="fas fa-cart-shopping"></i>
+            <a href="/">Carrinho</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="#products">Produtos</a></li>
+        </ul>
+        <ul>
+          <li><a href="#testimonials">Depoimentos</a></li>
+        </ul>
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+        </ul>
+        <ul>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="banner-main">
+    <div class="banner-main-content">
+      <h1>Smart Speaker com alexa</h1>
+      <p>Controle sua música com sua voz <br /> Experimente nossa caixa de som inteligente</p>
+      <strong>R$<span>149,99</span></strong>
+      <input type="submit" class="btn" value="&#43; Ver mais produtos" />
+    </div>
+    <div class="banner-main-image">
+      <img src="/img/img-banner.png" alt="Banner principal">
+    </div>
+  </section>
+  <section class="banner-mobile">
+    <div class="banner-mobile-content">
+      <h1>Smart Speaker com alexa</h1>
+      <p>Controle sua música com sua voz <br /> Experimente nossa caixa de som inteligente</p>
+      <strong>R$<span>149,99</span></strong>
+      <input type="submit" class="btn" value="&#43; Ver mais produtos" />
+    </div>
+  </section>
+  <section class="banners">
+    <div class="banner">
+      <div class="banner-content">
+        <i class="fa-brands fa-bluetooth"></i>
+        <h2>Conectividade Bluetooth 5.0</h2>
+      </div>
+    </div>
+    <div class="banner" id="banner-2">
+      <div class="banner-content">
+        <i class="fa-solid fa-volume-low"></i>
+        <h2>Qualidade de som de alta definição</h2>
+      </div>
+    </div>
+    <div class="banner" id="banner-3">
+      <div class="banner-content">
+        <i class="fa-solid fa-battery-full"></i>
+        <h2>Bateria de 2200 MAh</h2>
+      </div>
+    </div>
+    <div class="banner" id="banner-4">
+      <div class="banner-cover"></div>
+      <div class="banner-content">
+        <i class="fa-solid fa-tarp-droplet"></i>
+        <h2>Tecnologia impermeável</h2>
+      </div>
+    </div>
+  </section>
+  <section class="products-grid" id="products">
+    <h3 class="subtitle">Os campeões de vendas</h3>
+    <h2 class="title">Produtos mais vendidos</h2>
+    <div class="products-grid-container">
+      <div class="products-grid-card">
+        <span class="label hot">HOT</span>
+        <img src="/img/produto-01.png" alt="Produto 01">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <a href="" class="products-name">Caixa de som Bluetooth portátil BTN-1903</a>
+        <p class="products-price">R$168,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">HOT</span>
+        <img src="/img/produto-02.png" alt="Produto 02">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <a href="" class="products-name">Caixa de som portátil à prova d'água IPX6</a>
+        <p class="products-price">R$105,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">HOT</span>
+        <img src="/img/produto-03.png" alt="Produto 03">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <a href="" class="products-name">Caixa de som Bluetooth portátil com luz LED</a>
+        <p class="products-price">R$74,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">HOT</span>
+        <img src="/img/produto-04.png" alt="Produto 04">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <a href="" class="products-name">Mini Caixa de som Bluetooth portátil KXT-8963</a>
+        <p class="products-price">R$94,99</p>
+      </div>
+    </div>
+  </section>
+  <section class="battery-fire-resistant">
+    <div>
+      <img src="/img/section-battery.png" alt="Caixa de som">
+    </div>
+    <div class="battery-fire-resistant-text">
+      <h3 class="subtitle">Vida da bateria</h3>
+      <h2 class="title">Fique carregado. Até 8 horas com uma única carga</h2>
+      <p class="simple-text">Com uma bateria que dura até 8 horas, você pode levar a festa aonde quiser sem se preocupar
+        em ficar sem som. Com
+        qualidade de som superior e uma bateria que aguenta até mesmo as festas mais animadas, essa é a escolha perfeita
+        para
+        quem quer ouvir música sem limites.</p>
+    </div>
+  </section>
+  <section class="battery-fire-resistant reverse">
+    <div>
+      <img src="/img/section-battery-2.png" alt="Caixa de som">
+    </div>
+    <div class="battery-fire-resistant-text">
+      <h3 class="subtitle">alta resistência</h3>
+      <h2 class="title">nossa caixa de som resistente ao fogo</h2>
+      <p class="simple-text">Esta caixa de som é projetada para suportar altas temperaturas e evitar que o fogo se
+        propague, o que significa que você
+        pode usá-la com tranquilidade em qualquer lugar, seja em casa ou em um ambiente externo. Não perca mais tempo
+        com caixas
+        de som convencionais que não oferecem a segurança que você precisa.</p>
+    </div>
+  </section>
+  <section class="bass-colors">
+    <div class="bass-colors-container">
+      <div class="bass-colors-container-image">
+        <img src="/img/section-bass.png" alt="Caixa de som">
+      </div>
+      <div class="bass-colors-container-text">
+        <h3 class="subtitle">bass profissional</h3>
+        <h2 class="title">para os verdadeiros amantes da música</h2>
+        <p class="simple-text">Você sentirá como se estivesse em uma apresentação ao vivo ou em um clube noturno. Nossa
+          caixa de som oferece um som
+          limpo e cristalino que faz com que a música ganhe vida como nunca antes.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bass-colors reverse">
+    <div class="bass-colors-container reverse-container">
+      <div class="bass-colors-container-image">
+        <img src="/img/section-bass-2.png" alt="Caixa de som">
+      </div>
+      <div class="bass-colors-container-text">
+        <h3 class="subtitle">variação de cores</h3>
+        <h2 class="title">Combina com seu estilo e personalidade</h2>
+        <p class="simple-text">Não se contente com caixas de som monótonas e sem graça. Adquira agora a nossa caixa de
+          som com imensa variedade de
+          cores e leve sua experiência musical para o próximo nível!</p>
+      </div>
+    </div>
+  </section>
+  <section class="technical-especifications">
+    <h3 class="subtitle">Melhor em tudo</h3>
+    <h2 class="title">Especificações técnicas</h2>
+    <div class="technical-especifications-container">
+      <div class="especifications-open">
+        <div>
+          <a href="">
+            <h4>Especificações de áudio</h4>
+            <i class="fa-solid fa-circle-chevron-down"></i>
+          </a>
+        </div>
+        <ul>
+          <li>Alta Potência</li>
+          <li>Impedância Baixa</li>
+          <li>Resposta de frequência ampla</li>
+        </ul>
+      </div>
+      <div class="especifications-open">
+        <div>
+          <a href="">
+            <h4>Especificações Geral</h4>
+            <i class="fa-solid fa-circle-chevron-down"></i>
+          </a>
+        </div>
+        <ul>
+          <li>Alta sensibilidade sonora</li>
+          <li>Relação Sinal-ruído Alta</li>
+          <li>Drivers de Alta Qualidade</li>
+        </ul>
+      </div>
+      <a href="" class="especifications-closed">
+        <h4>Bateria</h4>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+      <a href="" class="especifications-closed">
+        <h4>Conexão Bluetooth</h4>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+      <a href="" class="especifications-closed">
+        <h4>Potência</h4>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+      <a href="" class="especifications-closed">
+        <h4>Resistência</h4>
+        <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+    </div>
+  </section>
+  <section class="second-banner">
+    <div class="second-banner-content"">
+      <img src=" ./img/tws.png" alt="Caixa com tecnologia TWS">
+      <div class="second-banner-content-text">
+        <h3 class="subtitle">tecnologia tws</h3>
+        <h2 class="title">Experimente a verdadeira liberdade sem fios</h2>
+        <p>Mais pessoas na festa do que você planejou? Adicione um segundo alto-falante com nossa tecnologia TWS</p>
+        <div class="icons">
+          <div class="icons-item">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>Sincronize suas caixas de som</span>
+          </div>
+          <div class="icons-item">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>O som estéreo de alta qualidade</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials" id="testimonials">
+    <h3 class="subtitle">satisfação comprovada</h3>
+    <h2 class="title">Depoimentos de nossos clientes</h2>
+    <div class="testimonials-content">
+      <i class="fa-solid fa-circle-arrow-left"></i>
+      <div class="testimonials-content-item">
+        <p>Essa caixa de som é simplesmente incrível! A qualidade do som é surpreendente e os graves são profundos e
+          impactantes.
+          Fácil de usar e configurar, eu a recomendaria para qualquer pessoa que esteja procurando uma excelente
+          experiência de
+          áudio em casa</p>
+        <i class="fa-solid fa-quote-left"></i>
+        <h4>Ana Santos</h4>
+        <span>15 04 2023</span>
+      </div>
+      <div class="testimonials-content-item" id="testimonial-01">
+        <p>Comprei essa caixa de som para levar comigo em viagens e fiquei impressionado com o seu desempenho. É
+          pequena e leve,
+          mas produz um som potente e de alta qualidade. A bateria dura bastante tempo e a conectividade Bluetooth é
+          muito prática. Vale cada centavo investido!</p>
+        <i class="fa-solid fa-quote-left"></i>
+        <h4>Pedro Costa</h4>
+        <span>22 05 2023</span>
+      </div>
+      <div class="testimonials-content-item" id="testimonial-01">
+        <p>Essa caixa de som superou todas as minhas expectativas! A qualidade do som é simplesmente fantástica, com
+          clareza e
+          definição impressionantes em todos os tipos de música. A construção é robusta e durável, e o design moderno e
+          elegante combina perfeitamente com a minha decoração.</p>
+        <i class="fa-solid fa-quote-left"></i>
+        <h4>Gustavo Almeida</h4>
+        <span>02 07 2023</span>
+      </div>
+      <i class="fa-solid fa-circle-arrow-right"></i>
+    </div>
+    <div class="count-slide">
+      <p><span>1</span> / 3</p>
+    </div>
+  </section>
+  <section class="special-features">
+    <div class="special-features-image">
+      <img src="/img/special-features.png" alt="Qualidades especiais">
+    </div>
+    <div class="special-features-texts">
+      <h3 class="subtitle">Melhor performance</h3>
+      <h2 class="title">Características especiais</h2>
+      <div class="special-features-content">
+        <div class="special-features-content-image">
+          <img src="./img/speaker.png" alt="caixa de som">
+        </div>
+        <div class="special-features-content-texts">
+          <h4>Qualidade de som excepcional</h4>
+          <p>Sons claros e nítidos, sem distorção ou ruído, em qualquer volume.
+            Ampla gama de frequências, desde os graves profundos até os agudos nítidos, para oferecer uma experiência de
+            audição
+            completa e imersiva.
+          </p>
+        </div>
+      </div>
+      <div class="special-features-content">
+        <div class="special-features-content-image">
+          <img src="./img/design.png" alt="Lâmapada">
+        </div>
+        <div class="special-features-content-texts">
+          <h4>Design elegante e moderno</h4>
+          <p>Visualmente atraente e de alta qualidade, materiais duráveis e uma aparência geral sofisticada. Design bem
+            pensado e
+            agradável aos olhos, para que possa se integrar perfeitamente com a decoração da sua casa ou escritório.</p>
+        </div>
+      </div>
+      <div class="special-features-content">
+        <div class="special-features-content-image">
+          <img src="./img/bluetooth.png" alt="Bluetooth">
+        </div>
+        <div class="special-features-content-texts">
+          <h4>Conectividade avançada</h4>
+          <p>Caixa de som compatível com uma ampla gama de dispositivos, incluindo smartphones, tablets, laptops e
+            outros
+            dispositivos habilitados para Bluetooth. Capaz de se conectar a redes Wi-Fi para streaming de música e
+            outras
+            funcionalidades avançadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="video-container">
+    <div class="video-container-images">
+      <h3 class="subtitle">Assista ao vídeo</h3>
+      <h2 class="title">Material premium e design de tirar o fôlego</h2>
+      <div class="video-content">
+        <a href=""><img src="./img/video-1.jpg" alt="Caixa de som"></a>
+        <a href=""><img src="./img/video-2.jpg" alt="Caixa de som"></a>
+        <a href=""><img src="./img/video-3.jpg" alt="Caixa de som"></a>
+        <a href=""><img src="./img/video-4.jpg" alt="Caixa de som"></a>
+        <a href=""><img src="./img/video-5.jpg" alt="Caixa de som"></a>
+        <a href=""><img src="./img/video-6.jpg" alt="Caixa de som"></a>
+      </div>
+    </div>
+      <h3 class="subtitle title-mobile">Assista ao vídeo</h3>
+      <h2 class="title  title-mobile">Material premium e design de tirar o fôlego</h2>
+    <div class="video-container-video">
+      <a href=""><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+  </section>
+  <section class="products-grid" id="products">
+    <h3 class="subtitle">As melhores novidades</h3>
+    <h2 class="title">Atualize sua coleção de áudio</h2>
+    <div class="products-grid-container">
+      <div class="products-grid-card">
+        <span class="label hot">novo</span>
+        <img src="/img/produto-05.png" alt="Produto 01">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <a href="" class="products-name">Monitor de áudio XPQ À Prova D'água</a>
+        <p class="products-price">R$745,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">novo</span>
+        <img src="/img/produto-06.png" alt="Produto 02">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <a href="" class="products-name">Caixa de som portátil SRS-XB12 sem fio</a>
+        <p class="products-price">R$84,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">novo</span>
+        <img src="/img/produto-07.png" alt="Produto 03">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <a href="" class="products-name">Caixa de som Bluetooth portátil Mi</a>
+        <p class="products-price">R$154,99</p>
+      </div>
+
+      <div class="products-grid-card">
+        <span class="label hot">novo</span>
+        <img src="/img/produto-08.png" alt="Produto 04">
+        <a href="#" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="rating-box">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <a href="" class="products-name">Fone de ouvido sem fio FGH-2563</a>
+        <p class="products-price">R$94,99</p>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="./img/about-image.jpg" alt="caixa de som">
+    </div>
+    <div class="about-texts">
+      <div>
+        <h3 class="subtitle">Desde 1990</h3>
+        <h2 class="title">Uma experiência única</h2>
+      </div>
+      <h4>Fundada em 1990, a nossa empresa tem se dedicado ao comércio varejista de caixas de som de alta qualidade</h4>
+      <p>Ao longo dos anos, expandimos a nossa gama de produtos, sempre buscando atender às necessidades e desejos dos
+        nossos
+        clientes. Além disso, temos investido em tecnologia de ponta e em uma equipe altamente capacitada para garantir
+        a
+        satisfação dos nossos clientes.</p>
+      <div class="about-texts-images">
+        <img src="/img/about-01.jpg" alt="Caixa de som">
+        <img src="/img/about-02.jpg" alt="Caixa de som">
+        <img src="/img/about-03.jpg" alt="Caixa de som">
+      </div>
+    </div>
+  </section>
+  <div class="contact-container">
+    <section class="contact" id="contact">
+      <div class="contact-form">
+        <h3 class="subtitle">Conte-nos como podemos ajudar</h3>
+        <h2 class="title">Alguma dúvida?</h2>
+        <form action="" class="form">
+          <input type="text" placeholder="Nome Completo">
+          <input type="text" placeholder="E-mail">
+          <input type="text" placeholder="Assunto">
+          <input type="text" placeholder="Celular">
+          <textarea name="message" id="" cols="30" rows="10" placeholder="Mensagem" id="textarea"></textarea>
+          <input type="submit" class="btn" value="Enviar" />
+        </form>
+      </div>
+    </section>
+  </div>
+  <section class="whatsapp"><i class="fa-brands fa-whatsapp"></i></section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-content-item first">
+        <a href="/" id="brand">
+          <h4>Sonic<span>Source</span></h4>
+          <i class="fas fa-headphones-alt"></i>
+        </a>
+        <p>Ao longo dos anos, expandimos a nossa gama de produtos, sempre buscando atender às necessidades e desejos dos
+          nossos
+          clientes.</p>
+        <div class="info">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <p>(00)1234-5678</p>
+            <p>(SEG-SEX, 10:00 - 19:00)</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content-item">
+        <h3>Guia de Compas</h3>
+        <ul>
+          <li><a href="">Comprar</a></li>
+          <li><a href="">Checkout</a></li>
+          <li><a href="">Cartão</a></li>
+          <li><a href="">Minha Conta</a></li>
+          <li><a href="">Políticas de privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-content-item">
+        <h3>Sobre Nós</h3>
+        <ul>
+          <li><a href="">Sobre nós</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Nosso blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-content-item">
+        <h3>Produtos Recentes</h3>
+        <ul>
+          <li><a href="">Monitor De Áudio À Prova D'água</a></li>
+          <li><a href="">Caixa De Som Portátil SRS-XB12 Sem Fio</a></li>
+          <li><a href="">Caixa De Som Bluetooth Portátil Mi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright 2023 © Daniel Custódio | Todos os direitos reservados</p>
+      <div>
+        <a href="https://www.linkedin.com/in/danielscustodio/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/DanielSCustodio" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+        <a href="https://danielcustodio.com.br/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
