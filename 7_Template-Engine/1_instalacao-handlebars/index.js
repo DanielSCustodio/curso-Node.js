@@ -6,7 +6,14 @@ app.engine('handlebars', exphbs.engine())
 app.set("view engine", "handlebars")
 
 app.get("/", (req, res)=>{
-  res.render("home")
+
+  const word = "Palavra"
+
+  const user ={
+    name: "Daniel",
+    surname: "Custódio"
+  }
+  res.render("home", {data: user, word})
 })
 
 app.listen(3000, ()=> {
