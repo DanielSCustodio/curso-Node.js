@@ -5,15 +5,20 @@ const app = express()
 app.engine('handlebars', exphbs.engine())
 app.set("view engine", "handlebars")
 
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard");
+});
+
 app.get("/", (req, res)=>{
 
   const word = "Palavra"
+  const auth = true
 
   const user ={
     name: "Daniel",
     surname: "Custódio"
   }
-  res.render("home", {data: user, word})
+  res.render("home", {user, word, auth})
 })
 
 app.listen(3000, ()=> {
