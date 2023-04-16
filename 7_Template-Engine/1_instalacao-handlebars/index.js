@@ -13,12 +13,13 @@ app.get("/", (req, res)=>{
 
   const word = "Palavra"
   const auth = true
+  const approved = false
 
   const user ={
     name: "Daniel",
     surname: "Custódio"
   }
-  res.render("home", {user, word, auth})
+  res.render("home", { user, word, auth, approved });
 })
 
 app.listen(3000, ()=> {

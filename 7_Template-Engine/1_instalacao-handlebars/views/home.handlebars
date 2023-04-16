@@ -1,4 +1,9 @@
 <h1>Isto é um teste</h1>
+{{#if approved}}
+  <p>Parabéns, seu cadastro foi aprovado</p>
+  {{else}}
+  <p>Seu cadastro não foi aprovado</p>
+{{/if}}
 <p>O nome do usuário é {{user.name}} {{user.surname}}</p>
 {{#if auth}}
   <p>Você está autenticado. Clique <a href="/dashboard">aqui</a> para acessar de cliente</p>
