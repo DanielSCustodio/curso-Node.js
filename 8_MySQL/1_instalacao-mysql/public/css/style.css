@@ -16,13 +16,13 @@ h1 {
   text-transform: uppercase;
 }
 
-.form {
+.form, .books-container {
   width: 450px;
   margin: 0 auto;
   padding: 1rem;
   border: 1px solid rgba(240, 248, 255, 0.517);
   border-radius: 5px;
-  box-shadow: 1px 2px 5px  rgba(88, 146, 173, 0.342);
+  box-shadow: 1px 2px 2px  rgba(207, 209, 209, 0.123);
 }
 
 .form-control {
@@ -52,5 +52,27 @@ h1 {
 .btn:hover{
   background-color: rgb(88, 146, 173);
   cursor: pointer;
+  color: aliceblue;
+}
+
+.book{
+  margin: 1rem 0;
+}
+
+.bold{
+  font-weight: bold;
+
+}
+
+.add {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 3rem;
+  color:  rgb(88, 146, 173);
+  margin-left: 90%;
+  transition: .8s;
+}
+
+.add:hover{
   color: aliceblue;
 }

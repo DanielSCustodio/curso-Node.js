@@ -1,7 +1,7 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
 const mysql = require("mysql")
-const env = require("custom-env").env("development.local");
+require("custom-env").env("development.local");
 
 const app = express()
 
@@ -21,6 +21,7 @@ app.use(            //capturar o body
 
 app.use(express.json())  //capturar o body
 
+
 const conn = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -37,11 +38,24 @@ app.post("/books/insertbook", (req, res)=>{
     if(err){
       console.log(err);
     }
-
-    res.redirect("/")
+    res.redirect("/books")
   })
 
 });
+
+app.get("/books", (req, res)=>{
+  const sql = "SELECT * FROM books"
+
+  conn.query(sql,(err, data)=>{
+    if(err){
+      console.log(err);
+      return
+    }
+
+    const books = data
+    res.render("books", {books})
+  })
+})
 
 conn.connect((err)=>{
   if(err){
