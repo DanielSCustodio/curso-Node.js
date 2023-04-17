@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(19, 20, 19);
+  color: aliceblue;
+}
+
+h1 {
+  text-align: center;
+  margin: 5rem;
+  text-transform: uppercase;
+}
+
+.form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid rgba(240, 248, 255, 0.517);
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px  rgba(88, 146, 173, 0.342);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  font-weight: 300;
+  margin-bottom: .3em;
+  color: rgb(88, 146, 173);
+}
+
+.form-control input {
+  padding: 5px;
+}
+
+.btn{
+  padding: 10px;
+  border: 0;
+  transition: .5s;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: rgb(88, 146, 173);
+  cursor: pointer;
+  color: aliceblue;
+}
