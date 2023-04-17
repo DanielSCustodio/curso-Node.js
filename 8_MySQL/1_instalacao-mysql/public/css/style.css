@@ -10,19 +10,46 @@ body {
   color: aliceblue;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.8s;
+}
+
+a:hover {
+  color: rgb(88, 146, 173);
+}
+
 h1 {
   text-align: center;
   margin: 5rem;
   text-transform: uppercase;
 }
 
-.form, .books-container {
+#nav-bar {
+  background-color: #1d1d18;
+  padding: 2rem 5rem;
+  border-bottom: 1px solid rgba(88, 146, 173, 0.62);
+}
+
+#nav-bar ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.form,
+.books-container,
+.book-page {
   width: 450px;
   margin: 0 auto;
   padding: 1rem;
   border: 1px solid rgba(240, 248, 255, 0.517);
   border-radius: 5px;
-  box-shadow: 1px 2px 2px  rgba(207, 209, 209, 0.123);
+  box-shadow: 1px 2px 2px rgba(207, 209, 209, 0.123);
 }
 
 .form-control {
@@ -33,46 +60,56 @@ h1 {
 
 .form-control label {
   font-weight: 300;
-  margin-bottom: .3em;
-  color: rgb(88, 146, 173);
+  margin-bottom: 0.3em;
 }
 
 .form-control input {
   padding: 5px;
 }
 
-.btn{
+.btn {
   padding: 10px;
   border: 0;
-  transition: .5s;
+  transition: 0.5s;
   border-radius: 5px;
   font-weight: bold;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgb(88, 146, 173);
   cursor: pointer;
   color: aliceblue;
 }
 
-.book{
+.book {
   margin: 1rem 0;
 }
 
-.bold{
+.bold {
   font-weight: bold;
-
 }
 
 .add {
   text-decoration: none;
   font-weight: 800;
   font-size: 3rem;
-  color:  rgb(88, 146, 173);
+  color: rgb(88, 146, 173);
   margin-left: 90%;
-  transition: .8s;
+  transition: 0.8s;
 }
 
-.add:hover{
+.add:hover {
   color: aliceblue;
+}
+
+.book-page {
+  margin-top: 5rem;
+}
+
+.book-page h1 {
+  color: rgb(88, 146, 173);
+}
+
+.book-page p {
+  text-align: center;
 }

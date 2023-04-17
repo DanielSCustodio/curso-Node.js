@@ -3,7 +3,9 @@
 <div class="books-container">
   {{#each books}}
     <div class="book">
-      {{this.id}} - <span class="bold">{{this.title}}</span> - {{this.pageqty}} páginas
+      <a href="/books/{{this.id}}">
+        {{this.id}} - <span class="bold">{{this.title}}</span> - {{this.pageqty}} páginas
+      </a>
     </div>
   {{/each}}
   <a href="/" class="add"> + </a>
