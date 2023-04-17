@@ -37,6 +37,7 @@ app.post("/books/insertbook", (req, res) => {
   conn.query(sql, (err) => {
     if (err) {
       console.log(err);
+      return
     }
     res.redirect("/books");
   });
@@ -83,6 +84,22 @@ app.get("/books", (req, res) => {
     const books = data;
     res.render("books", { books });
   });
+});
+
+app.post("/books/updatebook", (req, res)=>{
+  const id = req.body.id
+  const title = req.body.title
+  const pageqty = req.body.pageqty
+
+  const sql = `UPDATE books SET title='${title}', pageqty='${pageqty}' WHERE id=${id}`
+
+  conn.query(sql, (err)=>{
+    if(err){
+      console.log(err);
+      return
+    }
+    res.redirect("/books")
+  })
 });
 
 conn.connect((err) => {

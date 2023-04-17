@@ -1,5 +1,6 @@
 <h1>Edite o seu livro</h1>
-<form action="" method="post" class="form">
+<form action="/books/updatebook" method="post" class="form">
+<input type="hidden" name="id" value="{{book.id}}">
   <div class="form-control">
     <label for="title">Título</label>
     <input
@@ -18,5 +19,5 @@
       value="{{book.pageqty}}"
     />
   </div>
-  <input type="submit" value="Cadastrar" class="btn" />
+  <input type="submit" value="Editar" class="btn" />
 </form>
