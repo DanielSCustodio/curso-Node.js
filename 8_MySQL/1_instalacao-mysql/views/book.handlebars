@@ -5,7 +5,9 @@
     <p>Este livro contém {{book.pageqty}} páginas.</p>
     <div class="actions">
       <a href="/books/edit/{{book.id}}" id="edit">&#10000;</a>
-      <a href="/books/edit/{{book.id}}" id="delete">&#10005;</a>
+      <form action="/books/remove/{{book.id}}" method="post">
+        <input type="submit" value="&#10005;">
+      </form>
     </div>
   </div>
-</div>
+// </div><a href="/books/remove/{{book.id}}" id="delete">&#10005;</a>

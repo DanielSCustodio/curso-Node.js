@@ -37,7 +37,7 @@ app.post("/books/insertbook", (req, res) => {
   conn.query(sql, (err) => {
     if (err) {
       console.log(err);
-      return
+      return;
     }
     res.redirect("/books");
   });
@@ -86,20 +86,32 @@ app.get("/books", (req, res) => {
   });
 });
 
-app.post("/books/updatebook", (req, res)=>{
-  const id = req.body.id
-  const title = req.body.title
-  const pageqty = req.body.pageqty
+app.post("/books/updatebook", (req, res) => {
+  const id = req.body.id;
+  const title = req.body.title;
+  const pageqty = req.body.pageqty;
 
-  const sql = `UPDATE books SET title='${title}', pageqty='${pageqty}' WHERE id=${id}`
+  const sql = `UPDATE books SET title='${title}', pageqty='${pageqty}' WHERE id=${id}`;
 
-  conn.query(sql, (err)=>{
-    if(err){
+  conn.query(sql, (err) => {
+    if (err) {
       console.log(err);
-      return
+      return;
     }
-    res.redirect("/books")
-  })
+    res.redirect("/books");
+  });
+});
+
+app.post("/books/remove/:id", (req, res) => {
+  const id = req.params.id
+  const sql = `DELETE FROM books WHERE id=${id}`;
+
+  conn.query(sql, (err) => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect("/books");
+  });
 });
 
 conn.connect((err) => {
