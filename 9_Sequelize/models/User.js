@@ -6,7 +6,7 @@ const User = db.define("User", {
     type: DataTypes.STRING,
     allowNull: false
   },
-  ocuppation:{
+  occupation:{
     type: DataTypes.STRING,
     required: true,
   },

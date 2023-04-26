@@ -18,6 +18,25 @@ app.use(
 );
 app.use(express.json()); //capturar o body
 
+app.get("/users/create", (req, res) => {
+  res.render("adduser");
+});
+
+app.post("/users/create", async (req, res) => {
+  const { name, occupation } = req.body;
+  let { newsletter } = req.body;
+
+  if (newsletter === "on") {
+    newsletter = true;
+  }else{
+    newsletter = false;
+  }
+
+  await User.create({ name, occupation, newsletter });
+
+  res.redirect("/");
+});
+
 app.get("/", (req, res) => {
   res.render("home");
 });
@@ -25,6 +44,6 @@ app.get("/", (req, res) => {
 conn
   .sync()
   .then(() => {
-    app.listen(3000)  
+    app.listen(3000);
   })
   .catch((err) => console.log(`Ocorreu um erro: ${err}`));
