@@ -4,6 +4,7 @@ require("custom-env").env("development.local");
 const conn = require("./db/conn");
 
 const User = require("./models/User");
+const { where } = require("sequelize");
 
 const app = express();
 
@@ -28,7 +29,7 @@ app.post("/users/create", async (req, res) => {
 
   if (newsletter === "on") {
     newsletter = true;
-  }else{
+  } else {
     newsletter = false;
   }
 
@@ -37,10 +38,15 @@ app.post("/users/create", async (req, res) => {
   res.redirect("/");
 });
 
+app.get("/users/:id", async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findOne({ raw: true, where: { id: id } });
+  res.render("userview", { user });
+});
+
 app.get("/", async (req, res) => {
-  const users = await User.findAll({raw:true})
-  console.log(users);
-  res.render("home", {users});
+  const users = await User.findAll({ raw: true });
+  res.render("home", { users });
 });
 
 conn
