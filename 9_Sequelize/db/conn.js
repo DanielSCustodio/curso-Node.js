@@ -10,11 +10,11 @@ const sequelize = new Sequelize(
   }
 );
 
-try {
+/* try {
   sequelize.authenticate();
   console.log("Conectamos com sucesso via Sequelize");
 } catch (error) {
   console.log("Não foi possível conectar");
-}
+} */
 
 module.exports = sequelize;
