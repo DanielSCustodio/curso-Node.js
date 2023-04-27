@@ -4,7 +4,6 @@ require("custom-env").env("development.local");
 const conn = require("./db/conn");
 
 const User = require("./models/User");
-const { where } = require("sequelize");
 
 const app = express();
 
@@ -26,6 +25,7 @@ app.get("/users/create", (req, res) => {
 app.post("/users/create", async (req, res) => {
   const { name, occupation } = req.body;
   let { newsletter } = req.body;
+  console.log(newsletter);
 
   if (newsletter === "on") {
     newsletter = true;
@@ -48,6 +48,27 @@ app.post("/users/delete/:id", async (req, res) => {
   const { id } = req.params;
   await User.destroy({ where: { id: id } });
   res.redirect("/");
+});
+
+app.get("/users/edit/:id", async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findOne({ raw: true, where: { id: id } });
+  res.render("useredit", { user });
+});
+
+app.post("/users/update", async (req, res) => {
+  const { id, name, occupation } = req.body;
+  let { newsletter } = req.body;
+  if (newsletter === "on") {
+    newsletter = true;
+  } else {
+    newsletter = false;
+  }
+  const userData = { id, name, occupation, newsletter };
+
+  await User.update(userData, { where: { id: id } });
+
+  res.redirect("/")
 });
 
 app.get("/", async (req, res) => {

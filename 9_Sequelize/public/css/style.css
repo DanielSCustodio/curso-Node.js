@@ -16,7 +16,6 @@ a {
   color: inherit;
   transition: 1s;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
 }
 
 a:hover {
@@ -43,6 +42,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 500;
   max-width: 90%;
+  margin-left: 5%;
 }
 
 .form,
@@ -100,8 +100,8 @@ h1 {
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
+  margin-left: 10%;
   gap: 1rem;
-  justify-content: center;
 }
 
 .container .item {
@@ -116,23 +116,22 @@ h1 {
   gap: 1rem;
 }
 
-.actions{
+.actions {
   display: flex;
   justify-content: space-between;
   color: rgb(88, 146, 173);
 }
 
-.actions .btn-delete{
+.actions .btn-delete {
   border: 0;
   color: rgb(88, 146, 173);
   background: none;
   transition: 1s;
   font-size: 1rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
 }
 
-.actions .btn-delete:hover{
+.actions .btn-delete:hover {
   cursor: pointer;
   color: rgb(154, 48, 31);
 }
