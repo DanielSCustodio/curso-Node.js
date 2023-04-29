@@ -46,7 +46,7 @@ h1, h2 {
   margin-left: 5%;
 }
 
-.form{
+.form, .address-list{
   width: 450px;
   margin: 0 auto;
   padding: 2rem;
@@ -137,7 +137,6 @@ h1, h2 {
   color: rgb(154, 48, 31);
 }
 
-
 .container-edit {
   display: flex;
   margin: 0 auto;
@@ -147,3 +146,6 @@ h1, h2 {
   align-items: stretch;
 }
 
+.address-list{
+  background-color: rgb(29, 27, 27);
+}

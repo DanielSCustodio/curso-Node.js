@@ -51,8 +51,8 @@ app.post("/users/delete/:id", async (req, res) => {
 
 app.get("/users/edit/:id", async (req, res) => {
   const { id } = req.params;
-  const user = await User.findOne({ raw: true, where: { id: id } });
-  res.render("useredit", { user });
+  const user = await User.findOne({ include: Address, where: { id: id } });
+  res.render("useredit", { user: user.get({ plain: true }) });
 });
 
 app.post("/users/update", async (req, res) => {
