@@ -33,9 +33,7 @@ app.post("/users/create", async (req, res) => {
   } else {
     newsletter = false;
   }
-
   await User.create({ name, occupation, newsletter });
-
   res.redirect("/");
 });
 
@@ -66,10 +64,15 @@ app.post("/users/update", async (req, res) => {
     newsletter = false;
   }
   const userData = { id, name, occupation, newsletter };
-
   await User.update(userData, { where: { id: id } });
+  res.redirect("/");
+});
 
-  res.redirect("/")
+app.post("/address/create", async (req, res) => {
+  const { UserId, street, number, city } = req.body;
+  const address = { UserId, street, number, city };
+  await Address.create(address);
+  res.redirect(`/users/edit/${UserId}`);
 });
 
 app.get("/", async (req, res) => {
