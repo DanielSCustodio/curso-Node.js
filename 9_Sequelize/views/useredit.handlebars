@@ -1,5 +1,5 @@
 <div class="container-edit">
-  <div>
+  <div id="first">
     <h1>Editando: {{user.name}}</h1>
     <form action="/users/update" method="POST" class="form">
       <input type="hidden" name="id" value={{user.id}} />
@@ -34,7 +34,7 @@
     </form>
   </div>
   <div>
-    <h2>Endereços</h2>
+    <h2>Adicionar Endereço</h2>
     <form action="/address/create" method="POST" class="form">
       <input type="hidden" name="UserId" value={{user.id}} />
       <div class="form-control">
@@ -58,10 +58,24 @@
   </div>
   <div>
     <h2>Lista de endereços</h2>
-    <div  class="address-list">
-    {{#each user.Addresses}}
-      <p>#{{this.id}} - {{this.street}} - {{this.number}} - {{this.city}}</p>
-    {{/each}}
+    <div class="address-list">
+      {{#each user.Addresses}}
+        <div class="address-list-item">
+          <div>#{{this.id}}
+            -
+            {{this.street}}
+            -
+            {{this.number}}
+            -
+            {{this.city}}
+          </div>
+          <form action="/address/delete" method="POST">
+            <input type="hidden" name="UserId" value={{this.UserId}} />
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <input type="submit" value="Excluir" class="btn-delete" />
+          </form>
+        </div>
+      {{/each}}
     </div>
   </div>
 </div>
