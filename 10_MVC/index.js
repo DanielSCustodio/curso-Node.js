@@ -4,6 +4,7 @@ const conn = require("./db/connection");
 require("custom-env").env("development.local");
 
 const Task = require("./models/TaskModel");
+const tasksRoutes = require("./routes/tasksRoutes");
 
 const app = express();
 app.engine("handlebars", exphbs.engine());
@@ -15,6 +16,8 @@ app.use(
   })
 );
 app.use(express.json());
+
+app.use("/tasks", tasksRoutes);
 
 conn
   .sync()
