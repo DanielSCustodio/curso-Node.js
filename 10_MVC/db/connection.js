@@ -18,4 +18,4 @@ try {
   console.log("Houve algum erro na conexão com o banco de dado");
 }
 
-exports.default = sequelize;
+module.exports = sequelize;
