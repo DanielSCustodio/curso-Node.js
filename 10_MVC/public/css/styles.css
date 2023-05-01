@@ -1,0 +1,54 @@
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #070D0D;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #B30049;
+  border-radius: 50px;
+}
+
+html {
+  font-size: 12px;
+  background-color: rgba(240, 234, 242, 0.7137254902);
+  scroll-behavior: smooth;
+  color: #070D0D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.8s;
+  color: #070D0D;
+  font-weight: 500;
+}
+a:hover {
+  color: #B30049;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}

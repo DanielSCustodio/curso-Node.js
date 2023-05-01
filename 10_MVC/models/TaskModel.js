@@ -1,4 +1,4 @@
-const {DataTypes} = require("sequelize");
+const { DataTypes } = require("sequelize");
 const db = require("../db/connection");
 
 const Task = db.define("Task", {
@@ -16,6 +16,4 @@ const Task = db.define("Task", {
   },
 });
 
-
 module.exports = Task;
-
