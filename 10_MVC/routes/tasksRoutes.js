@@ -7,5 +7,6 @@ router.get("/add", TaskController.createTask); // Renderizar view
 router.get("/", TaskController.showTasks); // Renderizar view
 
 router.post("/add", TaskController.createTaskSave);
+router.post("/remove", TaskController.removeTask);
 
 module.exports = router;

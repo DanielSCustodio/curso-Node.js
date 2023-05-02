@@ -147,6 +147,16 @@ h2 {
   justify-content: space-between;
 }
 
+.actions button{
+  background: none;
+  border: none;
+}
+
+.actions button:hover{
+  cursor: pointer;
+}
+
+
 i{
   color: wheat;
   transition: 1s;
@@ -157,9 +167,9 @@ i:hover{
 }
 
 .bi-x-lg{
-  color: rgb(247, 64, 36);
+  color: rgb(236, 52, 24);
 }
 
 .bi-x-lg:hover{
-  color: rgb(150, 26, 6);
+  color: rgb(193, 88, 72);
 }

@@ -20,4 +20,11 @@ module.exports = class TaskController {
     await TaskModel.create(task);
     res.redirect("/tasks");
   }
+
+  static async removeTask(req, res) {
+    const { id } = req.body;
+    await TaskModel.destroy({ where: { id: id } });
+    res.redirect("/tasks");
+
+  }
 };
