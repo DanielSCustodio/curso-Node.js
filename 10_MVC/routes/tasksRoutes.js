@@ -3,7 +3,9 @@ const TaskController = require("../controllers/TaskController");
 
 const router = Router();
 
-router.get("/add", TaskController.createTask);
-router.get("/", TaskController.showTasks);
+router.get("/add", TaskController.createTask); // Renderizar view
+router.get("/", TaskController.showTasks); // Renderizar view
+
+router.post("/add", TaskController.createTaskSave);
 
 module.exports = router;

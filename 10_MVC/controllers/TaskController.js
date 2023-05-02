@@ -8,4 +8,15 @@ module.exports = class TaskController {
   static showTasks(_req, res) {
     res.render("tasks/all");
   }
+
+  static async createTaskSave(req, res) {
+    const task = {
+      title: req.body.title,
+      description: req.body.description,
+      done: false,
+    };
+
+    TaskModel.create(task);
+    res.redirect("/tasks");
+  }
 };
