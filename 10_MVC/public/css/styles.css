@@ -6,7 +6,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(19, 20, 19);
+  background: rgb(9,9,8);
+  background: linear-gradient(180deg, rgba(9,9,8,1) 49%, rgba(19,20,19,1) 85%);
   color: aliceblue;
   overflow-x: hidden;
 }
@@ -22,12 +23,17 @@ a:hover {
   color: rgb(40, 160, 220);
 }
 
+ul{
+  list-style: none;
+}
+
 h1,
 h2 {
   font-size: 1.5rem;
   text-align: center;
   text-transform: capitalize;
   color:  rgb(88, 146, 173);
+  font-weight: 500;
 }
 
 #nav-bar {
@@ -118,16 +124,18 @@ h2 {
   flex-wrap: wrap;
   max-width: 90%;
   margin: 0 auto;
+  margin-top: 5rem;
   margin-left: 10%;
   gap: 1rem;
 }
 
 .container .item {
+  background-color: #1b1b1a;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   border: 1px solid rgba(71, 73, 69, 0.62);
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 1.5rem;
   flex: 1 1 29%;
   max-width: 29%;
@@ -137,19 +145,21 @@ h2 {
 .actions {
   display: flex;
   justify-content: space-between;
-  color: rgb(88, 146, 173);
 }
 
-.btn-delete {
-  border: 0;
-  color: rgb(88, 146, 173);
-  background: none;
+i{
+  color: wheat;
   transition: 1s;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
 }
 
-.btn-delete:hover {
-  cursor: pointer;
-  color: rgb(154, 48, 31);
+i:hover{
+  color: rgb(88, 146, 173);
+}
+
+.bi-x-lg{
+  color: rgb(247, 64, 36);
+}
+
+.bi-x-lg:hover{
+  color: rgb(150, 26, 6);
 }
