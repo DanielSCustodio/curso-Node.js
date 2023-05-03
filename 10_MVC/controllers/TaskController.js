@@ -25,6 +25,21 @@ module.exports = class TaskController {
     const { id } = req.body;
     await TaskModel.destroy({ where: { id: id } });
     res.redirect("/tasks");
+  }
 
+  static async updateTask(req, res) {
+    const { id } = req.params;
+    const task = await TaskModel.findOne({ where: { id: id }, raw: true });
+    res.render("tasks/edit", { task });
+  }
+
+  static async updateTaskPost(req, res) {
+    const { id } = req.body;
+    const task = {
+      title: req.body.title,
+      description: req.body.description,
+    };
+    await TaskModel.update(task, { where: { id: id } });
+    res.redirect("/tasks");
   }
 };
