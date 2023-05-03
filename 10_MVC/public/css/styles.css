@@ -178,3 +178,7 @@ i:hover{
   color: rgb(193, 88, 72);
 }
 
+.done{
+  text-decoration: line-through rgb(161, 82, 70);
+  color: #ccc;
+}
