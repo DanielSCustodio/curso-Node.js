@@ -1,6 +1,9 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
+
 const conn = require("./db/conn");
+
+const productsRoutes = require("./routes/productRoutes");
 
 const app = express();
 
@@ -16,4 +19,8 @@ app.use(
 
 app.use(express.json());
 
-app.listen(3000)
+app.use(express.static("public"));
+
+app.use("/products", productsRoutes);
+
+app.listen(3000);
