@@ -16,4 +16,10 @@ module.exports = class ProductController {
     product.save();
     res.redirect("/products");
   }
+
+  static async getProduct(req, res) {
+    const id = req.params.id;
+    const product = await Product.getProductById(id);
+    res.render("products/item", { product });
+  }
 };
