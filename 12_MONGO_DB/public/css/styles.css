@@ -64,17 +64,6 @@ a:hover {
   border-radius: 5px;
 }
 
-/* Responsiveness */
-@media (max-width: 600px) {
-  #navbar ul {
-    flex-direction: column;
-  }
-
-  #navbar li {
-    margin: 10px 0;
-  }
-}
-
 form {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
@@ -82,6 +71,10 @@ form {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
+}
+
+.btn > input {
+  background: none !important;
 }
 
 .form-control {
@@ -190,5 +183,16 @@ input[type="submit"]:hover {
 
   .product {
     width: 90%;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  #navbar ul {
+    flex-direction: column;
+  }
+
+  #navbar li {
+    margin: 10px 0;
   }
 }
