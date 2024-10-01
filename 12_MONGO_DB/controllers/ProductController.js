@@ -22,4 +22,11 @@ module.exports = class ProductController {
     const product = await Product.getProductById(id);
     res.render("products/item", { product });
   }
+
+  static async removeProduct(req, res){
+    const id = req.params.id;
+    await Product.removeProductById(id)
+    res.redirect('/products')
+
+  }
 };
