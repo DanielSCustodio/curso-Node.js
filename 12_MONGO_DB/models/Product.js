@@ -32,6 +32,14 @@ class Product {
       .findOne({ _id: ObjectId(id) });
     return product;
   }
+
+  static async removeProductById(id) {
+    await conn
+      .db()
+      .collection("products")
+      .deleteOne({ _id: ObjectId(id) });
+    return;
+  }
 }
 
 module.exports = Product;
