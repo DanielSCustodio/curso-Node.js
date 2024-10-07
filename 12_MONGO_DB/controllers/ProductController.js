@@ -23,10 +23,22 @@ module.exports = class ProductController {
     res.render("products/item", { product });
   }
 
-  static async removeProduct(req, res){
+  static async removeProduct(req, res) {
     const id = req.params.id;
-    await Product.removeProductById(id)
-    res.redirect('/products')
+    await Product.removeProductById(id);
+    res.redirect("/products");
+  }
 
+  static async editProduct(req, res) {
+    const id = req.params.id;
+    const product = await Product.getProductById(id);
+    res.render("products/edit", { product });
+  }
+
+  static async editProductSave(req, res) {
+    const { id, name, image, price, description } = req.body;
+    const product = new Product(name, image, price, description);
+    await product.uptadeProduct(id);
+    res.redirect("/products");
   }
 };
