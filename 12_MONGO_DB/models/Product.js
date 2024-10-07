@@ -40,6 +40,14 @@ class Product {
       .deleteOne({ _id: ObjectId(id) });
     return;
   }
+
+  uptadeProduct(id) {
+    conn
+      .db()
+      .collection("products")
+      .updateOne({ _id: ObjectId(id) }, { $set: this });
+    return;
+  }
 }
 
 module.exports = Product;

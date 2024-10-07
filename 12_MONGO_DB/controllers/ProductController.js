@@ -32,6 +32,13 @@ module.exports = class ProductController {
   static async editProduct(req, res) {
     const id = req.params.id;
     const product = await Product.getProductById(id);
-    res.render('products/edit',{product})
+    res.render("products/edit", { product });
+  }
+
+  static async editProductSave(req, res) {
+    const { id, name, image, price, description } = req.body;
+    const product = new Product(name, image, price, description);
+    await product.uptadeProduct(id);
+    res.redirect("/products");
   }
 };
