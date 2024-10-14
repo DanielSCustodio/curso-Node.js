@@ -1,10 +1,10 @@
 const Product = require("../models/Product");
 
 module.exports = class ProductController {
-/*   static async showProducts(_req, res) {
-    const products = await Product.getProducts();
+  static async showProducts(_req, res) {
+    const products = await Product.find().lean();
     res.render("products/all", { products });
-  } */
+  }
 
   static createProduct(_req, res) {
     res.render("products/create");

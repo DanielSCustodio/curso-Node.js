@@ -13,6 +13,11 @@
   --navbar-text: #f5f5f5; /* Texto claro no navbar */
   --navbar-hover: #688ea0; /* Tom azul mais claro para hover */
   --container-bg: #3a3a3a; /* Fundo escuro para o container */
+  --card-border: #ccc;
+  --button-bg: #d1c4e9;
+  --button-hover-bg: #b39ddb; /* Tom mais escuro de lavanda */
+  --actions-bg: #b3e5fc;
+  --actions-hover-bg: #81d4fa;
 }
 
 
@@ -79,10 +84,8 @@ body {
   align-items: center;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: var(--container-bg);
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 40%;
+  width: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -164,4 +167,86 @@ textarea:focus {
 .btn:hover {
   background-color: var(--button-hover-bg);
   transform: translateY(-2px);
+}
+
+/* Estilos da listagem de produtos */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Estilos de cada produto (cards) */
+.product {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos dos links e textos nos cards */
+.product a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.product a:hover {
+  color: var(--primary-color);
+}
+
+.product h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.product p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+/* Estilos das imagens dos produtos */
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos da seção de ações */
+.actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.actions a {
+  background-color: var(--actions-bg);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.actions a:hover {
+  background-color: var(--actions-hover-bg);
+  transform: translateY(-3px);
 }
