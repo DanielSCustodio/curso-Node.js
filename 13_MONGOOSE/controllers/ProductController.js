@@ -1,10 +1,10 @@
 const Product = require("../models/Product");
 
 module.exports = class ProductController {
-/*   static async showProducts(_req, res) {
-    const products = await Product.getProducts();
+  static async showProducts(_req, res) {
+    const products = await Product.find().lean();
     res.render("products/all", { products });
-  } */
+  }
 
   static createProduct(_req, res) {
     res.render("products/create");
@@ -17,12 +17,12 @@ module.exports = class ProductController {
     res.redirect("/products");
   }
 
-/*   static async getProduct(req, res) {
+  static async getProduct(req, res) {
     const id = req.params.id;
-    const product = await Product.getProductById(id);
+    const product = await Product.findById(id).lean();
     res.render("products/item", { product });
   }
- */
+
 /*   static async removeProduct(req, res) {
     const id = req.params.id;
     await Product.removeProductById(id);
