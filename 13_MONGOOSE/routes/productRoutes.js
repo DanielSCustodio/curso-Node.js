@@ -8,7 +8,7 @@ router.get("/edit/:id", ProductController.editProduct);
 router.get("/:id", ProductController.getProduct);
 
 router.post("/create", ProductController.createProductSave);
-/* router.post("/edit", ProductController.editProductSave); */
+router.post("/edit", ProductController.editProductSave);
 /* router.post("/remove/:id", ProductController.removeProduct); */
 
 module.exports = router;
