@@ -12,7 +12,7 @@ module.exports = class ProductController {
 
   static async createProductSave(req, res) {
     const { name, image, price, description } = req.body;
-    const product = new Product({name, image, price, description});
+    const product = new Product({ name, image, price, description });
     await product.save();
     res.redirect("/products");
   }
@@ -23,22 +23,22 @@ module.exports = class ProductController {
     res.render("products/item", { product });
   }
 
-/*   static async removeProduct(req, res) {
+  static async editProduct(req, res) {
     const id = req.params.id;
-    await Product.removeProductById(id);
-    res.redirect("/products");
-  } */
-
-/*   static async editProduct(req, res) {
-    const id = req.params.id;
-    const product = await Product.getProductById(id);
+    const product = await Product.findById(id).lean();
     res.render("products/edit", { product });
-  } */
+  }
 
-/*   static async editProductSave(req, res) {
+  static async editProductSave(req, res) {
     const { id, name, image, price, description } = req.body;
-    const product = new Product(name, image, price, description);
-    await product.uptadeProduct(id);
+    const product = { name, image, price, description };
+    await Product.updateOne({ _id: id }, product);
     res.redirect("/products");
-  } */
+  }
+
+  static async removeProduct(req, res) {
+    const id = req.params.id;
+    await Product.deleteOne({ _id: id });
+    res.redirect("/products");
+  }
 };
