@@ -29,11 +29,13 @@ module.exports = class ProductController {
     res.redirect("/products");
   } */
 
-/*   static async editProduct(req, res) {
+  static async editProduct(req, res) {
     const id = req.params.id;
-    const product = await Product.getProductById(id);
+    const product = await Product.findById(id).lean();
+    console.log(product);
+    
     res.render("products/edit", { product });
-  } */
+  }
 
 /*   static async editProductSave(req, res) {
     const { id, name, image, price, description } = req.body;
